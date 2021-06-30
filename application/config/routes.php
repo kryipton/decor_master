@@ -55,7 +55,13 @@ $route['translate_uri_dashes'] = FALSE;
 
 
 $route['(:any)/home'] = 'HomeController/index';
+
+$route['(:any)/about'] = 'HomeController/about';
+
 $route['(:any)/services'] = 'HomeController/services';
+$route['(:any)/projects'] = 'HomeController/projects';
+$route['(:any)/gallery'] = 'HomeController/gallery';
+
 $route['(:any)/kamin'] = 'HomeController/camins';
 $route['(:any)/manqal'] = 'HomeController/mangals';
 $route['(:any)/kataloq'] = 'HomeController/photo_catalog';
