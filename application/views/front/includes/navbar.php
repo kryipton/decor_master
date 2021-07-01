@@ -14,7 +14,7 @@
 
             <?php if ($this->uri->segment(2) == "home" || $this->uri->segment(2) == "") {?>
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a class="nav-link active" href="<?=base_url("/".$lang)?>/home"><?=$this->lang->line("home")?></a></li>
+                    <li class="nav-item"><a class="nav-link " href="<?=base_url("/".$lang)?>/home"><?=$this->lang->line("home")?></a></li>
                     <li class="nav-item"><a class="nav-link" href="<?=base_url("/".$lang)?>/about"><?=$this->lang->line("about")?></a></li>
                     <li class="nav-item"><a class="nav-link" href="<?=base_url("/".$lang)?>/services"><?=$this->lang->line("services")?></a></li>
                     <li class="nav-item"><a class="nav-link" href="<?=base_url("/".$lang)?>/projects"><?=$this->lang->line("projects")?></a></li>

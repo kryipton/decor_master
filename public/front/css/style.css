@@ -151,6 +151,7 @@ textarea {
     border-bottom: 1px solid #f4f4f4;
     border-color: ease-in-out .15s, box-shadow ease-in-out .15s;
 }
+
 input:focus,
 textarea:focus {
     border-bottom-width: 1px;
@@ -3179,3 +3180,4 @@ button.mfp-arrow {
         text-align: center;
     }
 }
+

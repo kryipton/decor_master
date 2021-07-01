@@ -31,7 +31,7 @@
                 </div>
                 <div class="col-md-4 animate-box" data-animate-effect="fadeInUp">
                     <p><b><?=$this->lang->line("contact_form")?></b></p>
-                    <form method="post" class="row">
+                    <form method="post" class="row" id="ajax_form">
                         <div class="col-md-12">
                             <input type="text" name="name" id="name" placeholder="<?=$this->lang->line("full_name")?>"> </div>
                         <div class="col-md-12">
@@ -40,8 +40,9 @@
                             <textarea name="message" id="message" cols="40" rows="4" placeholder="<?=$this->lang->line("your_message")?>"></textarea>
                         </div>
                         <div class="col-md-12">
-                            <button class="butn-dark mt-15"><a href="#0"><span><?=$this->lang->line("send")?></span></a></button>
+                            <button  id="submit" class="butn-dark mt-15"><a ><span><?=$this->lang->line("send")?></span></a></button>
                         </div>
+                        <div id="form-messages" class="alert" role="alert"></div>
                     </form>
                 </div>
             </div>
