@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 29, 2021 at 01:35 PM
+-- Generation Time: Jul 01, 2021 at 11:21 AM
 -- Server version: 10.4.18-MariaDB
 -- PHP Version: 8.0.3
 
@@ -38,6 +38,13 @@ CREATE TABLE `about` (
   `img` varchar(254) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `about`
+--
+
+INSERT INTO `about` (`id`, `title_az`, `title_en`, `title_ru`, `desc_az`, `desc_en`, `desc_ru`, `img`) VALUES
+(1, 'adadad', '', '', '<p>sadasd</p>\r\n', '', '', 'bg.png');
+
 -- --------------------------------------------------------
 
 --
@@ -59,6 +66,13 @@ CREATE TABLE `contact` (
   `desc_ru` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `contact`
+--
+
+INSERT INTO `contact` (`id`, `phone`, `email`, `address_az`, `address_en`, `address_ru`, `copyright_az`, `copyright_en`, `copyright_ru`, `desc_az`, `desc_en`, `desc_ru`) VALUES
+(1, '11', 'asdasd', 'asdasd', '', '', 'asdsa', '', '', '<p>adasd</p>\r\n', '', '');
+
 -- --------------------------------------------------------
 
 --
@@ -67,11 +81,15 @@ CREATE TABLE `contact` (
 
 CREATE TABLE `documents` (
   `id` int(11) NOT NULL,
-  `name_az` varchar(255) NOT NULL,
-  `name_en` varchar(255) NOT NULL,
-  `name_ru` varchar(255) NOT NULL,
-  `img` varchar(254) NOT NULL
+  `file` varchar(254) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `documents`
+--
+
+INSERT INTO `documents` (`id`, `file`) VALUES
+(1, 'bg.png');
 
 -- --------------------------------------------------------
 
@@ -84,6 +102,14 @@ CREATE TABLE `gallery` (
   `file` varchar(254) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `gallery`
+--
+
+INSERT INTO `gallery` (`id`, `file`) VALUES
+(1, 'bg.jpg'),
+(2, 'bg.png');
+
 -- --------------------------------------------------------
 
 --
@@ -92,8 +118,15 @@ CREATE TABLE `gallery` (
 
 CREATE TABLE `logo` (
   `id` int(11) NOT NULL,
-  `file` varchar(254) NOT NULL
+  `img` varchar(254) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `logo`
+--
+
+INSERT INTO `logo` (`id`, `img`) VALUES
+(1, 'bg.png');
 
 -- --------------------------------------------------------
 
@@ -113,6 +146,13 @@ CREATE TABLE `news` (
   `desc_en` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `news`
+--
+
+INSERT INTO `news` (`id`, `title_az`, `title_en`, `title_ru`, `date`, `img`, `desc_az`, `desc_ru`, `desc_en`) VALUES
+(1, 'sadasd', '', '', '2021-06-10', 'bg.png', '<p>sdsadas</p>\r\n', '', '<p>adsdad</p>\r\n');
+
 -- --------------------------------------------------------
 
 --
@@ -125,6 +165,15 @@ CREATE TABLE `news_gallery` (
   `file` varchar(254) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `news_gallery`
+--
+
+INSERT INTO `news_gallery` (`id`, `news_id`, `file`) VALUES
+(1, 1, 'bg.png'),
+(2, 1, 'bg.jpg'),
+(3, 1, 'default.png');
+
 -- --------------------------------------------------------
 
 --
@@ -136,6 +185,13 @@ CREATE TABLE `partners` (
   `img` varchar(254) NOT NULL,
   `link` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `partners`
+--
+
+INSERT INTO `partners` (`id`, `img`, `link`) VALUES
+(1, 'bg.png', 'sadasd');
 
 -- --------------------------------------------------------
 
@@ -158,6 +214,13 @@ CREATE TABLE `projects` (
   `location` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `projects`
+--
+
+INSERT INTO `projects` (`id`, `title_az`, `title_en`, `title_ru`, `desc_az`, `desc_en`, `desc_ru`, `img`, `year`, `company`, `project_name`, `location`) VALUES
+(1, 'proyekt 1', '', '', '<p>asdassd<s>asdasasasd</s></p>\r\n', '', '', 'bg.png', '2021', 'asdasd', 'dadadsada', '1231312313');
+
 -- --------------------------------------------------------
 
 --
@@ -166,8 +229,17 @@ CREATE TABLE `projects` (
 
 CREATE TABLE `projects_gallery` (
   `id` int(11) NOT NULL,
+  `project_id` int(10) NOT NULL,
   `file` varchar(254) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `projects_gallery`
+--
+
+INSERT INTO `projects_gallery` (`id`, `project_id`, `file`) VALUES
+(1, 1, 'bg.jpg'),
+(2, 1, 'bg.png');
 
 -- --------------------------------------------------------
 
@@ -185,6 +257,13 @@ CREATE TABLE `services` (
   `desc_ru` text NOT NULL,
   `img` varchar(254) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `services`
+--
+
+INSERT INTO `services` (`id`, `title_az`, `title_en`, `title_ru`, `desc_az`, `desc_en`, `desc_ru`, `img`) VALUES
+(1, 'service 1', '', '', '<p>dasdas</p>\r\n', '<p><span style=\"font-size:72px\">sada;ldka;lkdadsd</span></p>\r\n', '', 'Kamin-.jpeg');
 
 -- --------------------------------------------------------
 
@@ -207,6 +286,14 @@ CREATE TABLE `slider` (
   `img` varchar(254) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `slider`
+--
+
+INSERT INTO `slider` (`id`, `title_az`, `title_en`, `title_ru`, `title2_az`, `title2_en`, `title2_ru`, `button_text_az`, `button_text_en`, `button_text_ru`, `button_link`, `img`) VALUES
+(1, 'asdasdd', '', '', '12312312', '', '2131213', 'sdadas', '', '', '', 'bg.jpg'),
+(2, 'sadasd', '', '', 'aasd', '', '', '', '', '', '', 'bg1.jpg');
+
 -- --------------------------------------------------------
 
 --
@@ -220,6 +307,34 @@ CREATE TABLE `social` (
   `instagram` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `social`
+--
+
+INSERT INTO `social` (`id`, `facebook`, `you_tube`, `instagram`) VALUES
+(1, 'asd', '123', 'dsa');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
+  `username` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `isAdmin` tinyint(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `username`, `password`, `isAdmin`) VALUES
+(1, 'super_admin', '21232f297a57a5a743894a0e4a801fc3', 1),
+(3, 'admin', '21232f297a57a5a743894a0e4a801fc3', 0);
+
 -- --------------------------------------------------------
 
 --
@@ -231,6 +346,13 @@ CREATE TABLE `videos` (
   `img` varchar(254) NOT NULL,
   `link` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `videos`
+--
+
+INSERT INTO `videos` (`id`, `img`, `link`) VALUES
+(1, 'bg.png', 'https://archico.az/construction/en/media/');
 
 --
 -- Indexes for dumped tables
@@ -315,6 +437,12 @@ ALTER TABLE `social`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `videos`
 --
 ALTER TABLE `videos`
@@ -328,85 +456,91 @@ ALTER TABLE `videos`
 -- AUTO_INCREMENT for table `about`
 --
 ALTER TABLE `about`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `contact`
 --
 ALTER TABLE `contact`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `documents`
 --
 ALTER TABLE `documents`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `gallery`
 --
 ALTER TABLE `gallery`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `logo`
 --
 ALTER TABLE `logo`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `news`
 --
 ALTER TABLE `news`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `news_gallery`
 --
 ALTER TABLE `news_gallery`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `partners`
 --
 ALTER TABLE `partners`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `projects`
 --
 ALTER TABLE `projects`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `projects_gallery`
 --
 ALTER TABLE `projects_gallery`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `services`
 --
 ALTER TABLE `services`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `slider`
 --
 ALTER TABLE `slider`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `social`
 --
 ALTER TABLE `social`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `videos`
 --
 ALTER TABLE `videos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

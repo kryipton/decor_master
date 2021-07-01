@@ -1,18 +1,5 @@
 <?php $lang = $this->session->userdata("lang")?>
 
-<style>
-
-    .row{
-        overflow: hidden;
-    }
-
-    [class*="col-"]{
-        margin-bottom: -99999px;
-        padding-bottom: 99999px;
-    }
-
-</style>
-
 
 <div class="content-wrapper">
     <!-- Lines -->
@@ -28,20 +15,21 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h2 class="section-title"><span>Gallery</span></h2> </div>
+                    <h2 class="section-title">Video <span>Gallery</span></h2> </div>
             </div>
             <div class="row">
 
                 <!-- 3 columns -->
                 <?php  foreach ($gallery as $item) { ?>
-
-                <div class="col-md-4 gallery-item">
-                    <a href="<?=base_url("uploads/gallery/").$item["file"]?>" title="" class="img-zoom" style="height: 100%;">
-                        <div class="gallery-box" style="height: 100%;">
-                            <div class="gallery-img" style="height: 100%;"> <img style="height: 100%;" src="<?=base_url("uploads/gallery/").$item["file"]?>" class="" alt="work-img"> </div>
+                    <div class="col-md-4">
+                        <div class="vid-area mb-30">
+                            <div class="vid-icon"> <img src="<?=base_url("uploads/videos/").$item["img"]?>" alt="YouTube">
+                                <a class="video-gallery-button vid" href="<?=$item["link"] ?>"> <span class="video-gallery-polygon">
+										<i class="ti-control-play"></i>
+									</span> </a>
+                            </div>
                         </div>
-                    </a>
-                </div>
+                    </div>
 
                 <?php  }?>
 

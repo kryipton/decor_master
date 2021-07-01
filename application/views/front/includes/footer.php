@@ -25,42 +25,6 @@
                     </div>
                 </div>
                 <!-- Testiominals -->
-                <div class="col-md-5 offset-md-1">
-                    <div class="testimonials-box animate-box" data-animate-effect="fadeInUp">
-                        <div class="head-box">
-                            <h4>What Client's Say?</h4> </div>
-                        <div class="owl-carousel owl-theme">
-                            <div class="item"> <span class="quote"><img src="<?=base_url("public/front/")?>img/quot.png" alt=""></span>
-                                <p>Architect dapibus augue metus the nec feugiat erat hendrerit nec. Duis ve ante the lemon sanleo nec feugiat erat hendrerit necuis ve ante.</p>
-                                <div class="info">
-                                    <div class="author-img"> <img src="<?=base_url("public/front/")?>img/team/1.jpg" alt=""> </div>
-                                    <div class="cont">
-                                        <h6>Jason Brown</h6> <span>Crowne Plaza Owner</span> </div>
-                                </div>
-                            </div>
-                            <div class="item"> <span class="quote">
-											<img src="<?=base_url("public/front/")?>img/quot.png" alt="">
-										</span>
-                                <p>Interior dapibus augue metus the nec feugiat erat hendrerit nec. Duis ve ante the lemon sanleo nec feugiat erat hendrerit necuis ve ante.</p>
-                                <div class="info">
-                                    <div class="author-img"> <img src="<?=base_url("public/front/")?>img/team/2.jpg" alt=""> </div>
-                                    <div class="cont">
-                                        <h6>Emily White</h6> <span>Armada Owner</span> </div>
-                                </div>
-                            </div>
-                            <div class="item"> <span class="quote">
-											<img src="<?=base_url("public/front/")?>img/quot.png" alt="">
-										</span>
-                                <p>Urban dapibus augue metus the nec feugiat erat hendrerit nec. Duis ve ante the lemon sanleo nec feugiat erat hendrerit necuis ve ante.</p>
-                                <div class="info">
-                                    <div class="author-img"> <img src="<?=base_url("public/front/")?>img/team/4.jpg" alt=""> </div>
-                                    <div class="cont">
-                                        <h6>Jesica Smith</h6> <span>Alsa Manager</span> </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
@@ -133,9 +97,6 @@
                 </div>
                 <div class="col-md-4 abot">
                     <div class="social-icon"> <a href="<?=$social["facebook"]?>"><i class="ti-facebook"></i></a> <a href="<?=$social["youtube"]?>"><i class="ti-youtube"></i></a> <a href="<?=$social["instagram"]?>"><i class="ti-instagram"></i></a>  </div>
-                </div>
-                <div class="col-md-4">
-                    <p class="right"><a href="<?=base_url("public/front/")?>#">Terms &amp; Conditions</a></p>
                 </div>
             </div>
         </div>

@@ -59,7 +59,7 @@
                 <div class="col-md-6 animate-box" data-animate-effect="fadeInUp">
                     <div class="about-img">
                         <div class="img"> <img src="<?=base_url("uploads/about/$about[img]")?>" class="img-fluid" alt=""> </div>
-                        <div class="about-img-2 about-buro">Canada Office</div>
+                        <div class="about-img-2 about-buro"></div>
                     </div>
                 </div>
             </div>
@@ -77,34 +77,15 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="owl-carousel owl-theme">
+                        <?php  foreach ($projects as $item) { ?>
                         <div class="item">
-                            <div class="position-re o-hidden"> <img src="<?=base_url("public/front/")?>img/projects/1.jpg" alt=""> </div>
+                            <div class="position-re o-hidden"> <img src="<?=base_url("uploads/projects/").$item['img']?>" alt=""> </div>
                             <div class="con">
-                                <h6><a href="<?=base_url("public/front/")?>cotton-house.html">Interior</a></h6>
-                                <h5><a href="<?=base_url("public/front/")?>cotton-house.html">Cotton House</a></h5>
-                                <div class="line"></div> <a href="<?=base_url("public/front/")?>cotton-house.html"><i class="ti-arrow-right"></i></a> </div>
+                                <h6><a href="<?=base_url("$lang/project/").$item["id"]?>"><?=$item["company"]?></a></h6>
+                                <h5><a href="<?=base_url("$lang/project/").$item["id"]?>"><?=$item["title_$lang"]?></a></h5>
+                                <div class="line"></div> <a href="<?=base_url("$lang/project/").$item["id"]?>"><i class="ti-arrow-right"></i></a> </div>
                         </div>
-                        <div class="item">
-                            <div class="position-re o-hidden"> <img src="<?=base_url("public/front/")?>img/projects/2.jpg" alt=""> </div>
-                            <div class="con">
-                                <h6><a href="<?=base_url("public/front/")?>armada-center.html">Exterior</a></h6>
-                                <h5><a href="<?=base_url("public/front/")?>armada-center.html">Armada Center</a></h5>
-                                <div class="line"></div> <a href="<?=base_url("public/front/")?>armada-center.html"><i class="ti-arrow-right"></i></a> </div>
-                        </div>
-                        <div class="item">
-                            <div class="position-re o-hidden"> <img src="<?=base_url("public/front/")?>img/projects/3.jpg" alt=""> </div>
-                            <div class="con">
-                                <h6><a href="<?=base_url("public/front/")?>stonya-villa.html">Urban</a></h6>
-                                <h5><a href="<?=base_url("public/front/")?>stonya-villa.html">Stonya Villa</a></h5>
-                                <div class="line"></div> <a href="<?=base_url("public/front/")?>stonya-villa.html"><i class="ti-arrow-right"></i></a> </div>
-                        </div>
-                        <div class="item">
-                            <div class="position-re o-hidden"> <img src="<?=base_url("public/front/")?>img/projects/4.jpg" alt=""> </div>
-                            <div class="con">
-                                <h6><a href="<?=base_url("public/front/")?>prime-hotel.html">Interior</a></h6>
-                                <h5><a href="<?=base_url("public/front/")?>prime-hotel.html">Prime Hotel</a></h5>
-                                <div class="line"></div> <a href="<?=base_url("public/front/")?>prime-hotel.html"><i class="ti-arrow-right"></i></a> </div>
-                        </div>
+                        <?php  }?>
                     </div>
                 </div>
             </div>
@@ -120,36 +101,18 @@
                     <h2 class="section-title">Our <span>Services</span></h2> </div>
             </div>
             <div class="row">
+                <?php $i=1; foreach ($services as $item) { ?>
                 <div class="col-md-4">
                     <div class="item">
-                        <a href="<?=base_url("public/front/")?>architecture.html"> <img src="<?=base_url("public/front/")?>img/icons/icon-1.png" alt="">
-                            <h5>Architecture</h5>
+                        <a href="<?=base_url("$lang/service/").$item["id"]?>"> <img src="<?=base_url("uploads/services/").$item['img']?>" alt="">
+                            <h5><?=$item["title_$lang"]?></h5>
                             <div class="line"></div>
-                            <p>Architecture bibendum eros eget lacus the vulputate sit amet vehicuta nibhen ulicera in the vitae miss.</p>
-                            <div class="numb">01</div>
+                            <p><?=$item["desc_$lang"]?></p>
+                            <div class="numb">0<?=$i?></div>
                         </a>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="item">
-                        <a href="<?=base_url("public/front/")?>interior-design.html"> <img src="<?=base_url("public/front/")?>img/icons/icon-2.png" alt="">
-                            <h5>Interior Design</h5>
-                            <div class="line"></div>
-                            <p>Architecture bibendum eros eget lacus the vulputate sit amet vehicuta nibhen ulicera in the vitae miss.</p>
-                            <div class="numb">02</div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="item">
-                        <a href="<?=base_url("public/front/")?>urban-design.html"> <img src="<?=base_url("public/front/")?>img/icons/icon-3.png" alt="">
-                            <h5>Urban Design</h5>
-                            <div class="line"></div>
-                            <p>Architecture bibendum eros eget lacus the vulputate sit amet vehicuta nibhen ulicera in the vitae miss.</p>
-                            <div class="numb">03</div>
-                        </a>
-                    </div>
-                </div>
+                <?php $i++; if ($i==4) {break;} }?>
             </div>
         </div>
     </section>
@@ -165,34 +128,15 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="owl-carousel owl-theme">
+                        <?php  foreach ($news as $item) { ?>
                         <div class="item">
-                            <div class="position-re o-hidden"> <img src="<?=base_url("public/front/")?>img/slider/1.jpg" alt=""> </div>
+                            <div class="position-re o-hidden"> <img src="<?=base_url("uploads/news/").$item['img']?>" alt=""> </div>
                             <div class="con"> <span class="category">
-                                        <a href="<?=base_url("public/front/")?>blog.html">Architecture </a> -  20.12.2021
+                                        <a href="<?=base_url("$lang/news/").$item["id"]?>"><?=$item["title_$lang"]?> </a> -  <?=$item["date"]?>
                                     </span>
-                                <h5><a href="<?=base_url("public/front/")?>post.html">Modern Architectural Structures</a></h5> </div>
+                                <h5><a href="<?=base_url("$lang/news/").$item["id"]?>"><?=$item["title_$lang"]?></a></h5> </div>
                         </div>
-                        <div class="item">
-                            <div class="position-re o-hidden"> <img src="<?=base_url("public/front/")?>img/slider/2.jpg" alt=""> </div>
-                            <div class="con"> <span class="category">
-                                        <a href="<?=base_url("public/front/")?>blog.html">Interior</a> - 18.12.2021
-                                    </span>
-                                <h5><a href="<?=base_url("public/front/")?>post.html">Modernism in Architecture</a></h5> </div>
-                        </div>
-                        <div class="item">
-                            <div class="position-re o-hidden"> <img src="<?=base_url("public/front/")?>img/slider/3.jpg" alt=""> </div>
-                            <div class="con"> <span class="category">
-                                        <a href="<?=base_url("public/front/")?>blog.html">Urban</a> - 16.12.2021
-                                    </span>
-                                <h5><a href="<?=base_url("public/front/")?>post.html">Postmodern Architecture</a></h5> </div>
-                        </div>
-                        <div class="item">
-                            <div class="position-re o-hidden"> <img src="<?=base_url("public/front/")?>img/slider/4.jpg" alt=""> </div>
-                            <div class="con"> <span class="category">
-                                    <a href="<?=base_url("public/front/")?>blog.html">Planing</a> - 14.12.2021
-                                </span>
-                                <h5><a href="<?=base_url("public/front/")?>post.html">Modern Architecture Buildings</a></h5> </div>
-                        </div>
+                        <?php  }?>
                     </div>
                 </div>
             </div>

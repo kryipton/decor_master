@@ -21,7 +21,7 @@
                 <?php $i=1; foreach ($services as $item) { ?>
                 <div class="col-md-4">
                     <div class="item">
-                        <a href="architecture.html"> <img src="<?=base_url("uploads/services/").$item['img']?>" alt="">
+                        <a href="<?=base_url("$lang/service/").$item["id"]?>"> <img src="<?=base_url("uploads/services/").$item['img']?>" alt="">
                             <h5><?=$item["title_$lang"]?></h5>
                             <div class="line"></div>
                             <p><?=$item["desc_$lang"]?></p>

@@ -59,8 +59,14 @@ $route['(:any)/home'] = 'HomeController/index';
 $route['(:any)/about'] = 'HomeController/about';
 
 $route['(:any)/services'] = 'HomeController/services';
+$route['(:any)/service/(.*)'] = 'HomeController/serviceSingle/$2/$1';
 $route['(:any)/projects'] = 'HomeController/projects';
+$route['(:any)/project/(.*)'] = 'HomeController/projectSingle/$2/$1';
 $route['(:any)/gallery'] = 'HomeController/gallery';
+$route['(:any)/videos'] = 'HomeController/videos';
+$route['(:any)/documents'] = 'HomeController/documents';
+$route['(:any)/news'] = 'HomeController/news';
+$route['(:any)/news/(.*)'] = 'HomeController/newsSingle/$2/$1';
 
 $route['(:any)/kamin'] = 'HomeController/camins';
 $route['(:any)/manqal'] = 'HomeController/mangals';

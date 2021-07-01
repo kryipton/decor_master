@@ -32,6 +32,10 @@ class HomeController extends CI_Controller {
 
         $data["slides"] = $this->db->order_by("id", "desc")->get("slider")->result_array();
         $data["about"] = $this->db->get("about")->row_array();
+        $data["services"] = $this->db->order_by("id", "desc")->get("services")->result_array();
+        $data["projects"] = $this->db->order_by("id", "desc")->get("projects")->result_array();
+        $data["news"] = $this->db->order_by("id", "desc")->get("news")->result_array();
+
 
         $data["page"] = "home/index";
         $this->load->view('front/includes/index', $data);
@@ -65,6 +69,25 @@ class HomeController extends CI_Controller {
         $this->load->view('front/includes/index', $data);
     }
 
+    public function serviceSingle($id)
+    {
+        //hamisinda cagirilacaqlar
+        $data["slides"] = $this->db->order_by("id", "desc")->get("slider")->result_array();
+        $data["contact"] = $this->db->get("contact")->row_array();
+        $data["social"] = $this->db->get("social")->row_array();
+        //hamisinda cagirilacaqlar
+
+        $data["services"] = $this->db->order_by("id", "desc")->get("services")->result_array();
+
+        $data["service"] = $this->db->where("id", $id)->get("services")->row_array();;
+
+        if(empty($data["service"]))
+            redirect(base_url());
+
+        $data["page"] = "services/single";
+        $this->load->view('front/includes/index', $data);
+    }
+
     public function projects()
     {
         //hamisinda cagirilacaqlar
@@ -79,6 +102,26 @@ class HomeController extends CI_Controller {
         $this->load->view('front/includes/index', $data);
     }
 
+    public function projectSingle($id)
+    {
+        //hamisinda cagirilacaqlar
+        $data["slides"] = $this->db->order_by("id", "desc")->get("slider")->result_array();
+        $data["contact"] = $this->db->get("contact")->row_array();
+        $data["social"] = $this->db->get("social")->row_array();
+        //hamisinda cagirilacaqlar
+
+        $data["projects"] = $this->db->order_by("id", "desc")->get("projects")->result_array();
+        $data["gallery"] = $this->db->where("project_id", $id)->order_by("id", "desc")->get("projects_gallery")->result_array();
+
+        $data["project"] = $this->db->where("id", $id)->get("projects")->row_array();;
+
+        if(empty($data["project"]))
+            redirect(base_url());
+
+
+        $data["page"] = "projects/single";
+        $this->load->view('front/includes/index', $data);
+    }
 
     public function contact()
     {
@@ -107,6 +150,68 @@ class HomeController extends CI_Controller {
         $this->load->view('front/includes/index', $data);
     }
 
+    public function videos()
+    {
+        //hamisinda cagirilacaqlar
+        $data["slides"] = $this->db->order_by("id", "desc")->get("slider")->result_array();
+        $data["contact"] = $this->db->get("contact")->row_array();
+        $data["social"] = $this->db->get("social")->row_array();
+        //hamisinda cagirilacaqlar
+
+        $data["gallery"] = $this->db->order_by("id", "desc")->get("videos")->result_array();
+
+        $data["page"] = "video_gallery/index";
+        $this->load->view('front/includes/index', $data);
+    }
+
+    public function documents()
+    {
+        //hamisinda cagirilacaqlar
+        $data["slides"] = $this->db->order_by("id", "desc")->get("slider")->result_array();
+        $data["contact"] = $this->db->get("contact")->row_array();
+        $data["social"] = $this->db->get("social")->row_array();
+        //hamisinda cagirilacaqlar
+
+        $data["gallery"] = $this->db->order_by("id", "desc")->get("documents")->result_array();
+
+        $data["page"] = "documents/index";
+        $this->load->view('front/includes/index', $data);
+    }
+
+    public function news()
+    {
+        //hamisinda cagirilacaqlar
+        $data["slides"] = $this->db->order_by("id", "desc")->get("slider")->result_array();
+        $data["contact"] = $this->db->get("contact")->row_array();
+        $data["social"] = $this->db->get("social")->row_array();
+        //hamisinda cagirilacaqlar
+
+        $data["news"] = $this->db->order_by("id", "desc")->get("news")->result_array();
+
+        $data["page"] = "news/index";
+        $this->load->view('front/includes/index', $data);
+    }
 
 
+    public function newsSingle($id)
+    {
+        //hamisinda cagirilacaqlar
+        $data["slides"] = $this->db->order_by("id", "desc")->get("slider")->result_array();
+        $data["contact"] = $this->db->get("contact")->row_array();
+        $data["social"] = $this->db->get("social")->row_array();
+        //hamisinda cagirilacaqlar
+
+        $data["news"] = $this->db->order_by("id", "desc")->get("news")->result_array();
+
+        $data["gallery"] = $this->db->where("news_id", $id)->order_by("id", "desc")->get("news_gallery")->result_array();
+
+
+        $data["newsSingle"] = $this->db->where("id", $id)->get("news")->row_array();;
+
+        if(empty($data["newsSingle"]))
+            redirect(base_url());
+
+        $data["page"] = "news/single";
+        $this->load->view('front/includes/index', $data);
+    }
 }

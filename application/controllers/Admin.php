@@ -15,7 +15,7 @@ class Admin extends CI_Controller{
             $this->load->view('admin/login/content');
 
         }else{
-            redirect(base_url("MenuController"));
+            redirect(base_url("SlideController"));
         }
 
     }
@@ -40,7 +40,7 @@ class Admin extends CI_Controller{
                     $this->session->set_userdata("user", $user["id"]);
                     $this->session->set_userdata("user_role", $user["isAdmin"]);
                     $this->session->set_flashdata("success", "Daxil oldunuz");
-                    redirect(base_url("MenuController"));
+                    redirect(base_url("SlideController"));
                 }else{
                     $this->session->set_flashdata("alert", "İstifadəci adı vəya Şifrə yanlışdır");
                     redirect(base_url("Admin"));
@@ -52,7 +52,7 @@ class Admin extends CI_Controller{
             }
 
         }else{
-            redirect(base_url("MenuController"));
+            redirect(base_url("SlideController"));
         }
     }
 
@@ -64,7 +64,7 @@ class Admin extends CI_Controller{
             $this->session->set_flashdata("success", "Çıxıldı");
             redirect(base_url("Admin"));
         }else{
-            redirect(base_url("MenuController"));
+            redirect(base_url("SlideController"));
         }
     }
 

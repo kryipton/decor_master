@@ -1,13 +1,5 @@
 <?php $lang = $this->session->userdata("lang")?>
 
-<style>
-
-    .c_col * {
-        height: 100%;
-    }
-
-</style>
-
 
 <div class="content-wrapper">
     <!-- Lines -->
@@ -23,18 +15,18 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 animate-box" data-animate-effect="fadeInUp">
-                    <h2 class="section-title">Our <span>Projects</span></h2> </div>
+                    <h2 class="section-title">Our <span>News</span></h2> </div>
             </div>
-            <div class="row">
+            <div class="row c_row">
 
-                <?php  foreach ($projects as $item) { ?>
+                <?php  foreach ($news as $item) { ?>
                 <div class="col-md-6 animate-box c_col" data-animate-effect="fadeInUp" style="max-height: 300px!important;">
-                    <div class="item" >
-                        <div class="position-re o-hidden"> <img src="<?=base_url("uploads/projects/").$item['img']?>" alt=""> </div>
+                    <div class="item">
+                        <div class="position-re o-hidden"> <img src="<?=base_url("uploads/news/").$item['img']?>" alt=""> </div>
                         <div class="con">
-                            <h6><a href="<?=base_url("$lang/project/").$item["id"]?>"><?=$item["company"]?></a></h6>
-                            <h5><a href="<?=base_url("$lang/project/").$item["id"]?>"><?=$item["title_$lang"]?></a></h5>
-                            <div class="line"></div> <a href="<?=base_url("$lang/project/").$item["id"]?>"><i class="ti-arrow-right"></i></a> </div>
+
+                            <h5><a href="<?=base_url("$lang/news/").$item["id"]?>"><?=$item["title_$lang"]?></a></h5>
+                            <div class="line"></div> <a href="<?=base_url("$lang/news/").$item["id"]?>"><i class="ti-arrow-right"></i></a> </div>
                     </div>
                 </div>
                <?php  }?>
@@ -44,3 +36,8 @@
     </section>
 
 
+    <style>
+        .c_col * {
+            height: 100%;
+        }
+    </style>
