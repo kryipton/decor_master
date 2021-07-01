@@ -15,32 +15,32 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 animate-box" data-animate-effect="fadeInUp">
-                    <h2 class="section-title">Contact <span>Us</span></h2> </div>
+                    <h2 class="section-title"><?=$this->lang->line("contact")?></span></h2> </div>
             </div>
             <div class="row mb-90">
                 <div class="col-md-4 mb-30 animate-box" data-animate-effect="fadeInUp">
-                    <p><b>Bauen Architecture Firm</b></p>
+
                     <p><?=$contact["desc_$lang"]?></p>
                     <p><b>VAT :</b> USA002323065B06</p>
                 </div>
                 <div class="col-md-4 mb-30 animate-box" data-animate-effect="fadeInUp">
-                    <p><b>Contact Details</b></p>
-                    <p><b>Phone :</b> <?=$contact["phone"]?></p>
-                    <p><b>Email :</b> <?=$contact["email"]?></p>
-                    <p><b>Address :</b> <?=$contact["adress_$lang"]?></p>
+                    <p><b><?=$this->lang->line("contact_details")?></b></p>
+                    <p><b><?=$this->lang->line("phone")?> :</b> <?=$contact["phone"]?></p>
+                    <p><b><?=$this->lang->line("email")?> :</b> <?=$contact["email"]?></p>
+                    <p><b><?=$this->lang->line("address")?> :</b> <?=$contact["adress_$lang"]?></p>
                 </div>
                 <div class="col-md-4 animate-box" data-animate-effect="fadeInUp">
-                    <p><b>Contact Form</b></p>
+                    <p><b><?=$this->lang->line("contact_form")?></b></p>
                     <form method="post" class="row">
                         <div class="col-md-12">
-                            <input type="text" name="name" id="name" placeholder="Full Name"> </div>
+                            <input type="text" name="name" id="name" placeholder="<?=$this->lang->line("full_name")?>"> </div>
                         <div class="col-md-12">
-                            <input type="email" name="email" id="email" placeholder="Your Email" required=""> </div>
+                            <input type="email" name="email" id="email" placeholder="<?=$this->lang->line("your_email")?>" required=""> </div>
                         <div class="col-md-12">
-                            <textarea name="message" id="message" cols="40" rows="4" placeholder="Your Message"></textarea>
+                            <textarea name="message" id="message" cols="40" rows="4" placeholder="<?=$this->lang->line("your_message")?>"></textarea>
                         </div>
                         <div class="col-md-12">
-                            <button class="butn-dark mt-15"><a href="#0"><span>Send</span></a></button>
+                            <button class="butn-dark mt-15"><a href="#0"><span><?=$this->lang->line("send")?></span></a></button>
                         </div>
                     </form>
                 </div>

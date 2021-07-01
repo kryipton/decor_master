@@ -23,7 +23,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 animate-box" data-animate-effect="fadeInUp">
-                    <h2 class="section-title">Our <span>Projects</span></h2> </div>
+                    <h2 class="section-title"><?=$this->lang->line("our_projects")?></span></h2> </div>
             </div>
             <div class="row">
 

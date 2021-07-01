@@ -26,11 +26,11 @@
                         <div class="sidebar-widget services">
                             <div class="widget-inner">
                                 <div class="sidebar-title">
-                                    <h4>All News</h4> </div>
+                                    <h4><?=$this->lang->line("current_news")?></h4> </div>
                                 <ul>
-                                    <?php  foreach ($news as $item) { ?>
+                                    <?php $i=1; foreach ($news as $item) { ?>
                                         <li <?php if ($newsSingle["id"]==$item["id"]) { ?>class="active" <?php  }?>><a href="<?=base_url("$lang/news/").$item["id"]?>"><?=$item["title_$lang"] ?></a></li>
-                                    <?php  }?>
+                                    <?php if ($i==5){break;} }?>
                                 </ul>
                             </div>
                         </div>
@@ -39,7 +39,7 @@
             </div>
 
             <div class="row mt-30 c_row">
-                <?php $i=1;  foreach ($gallery as $item) { ?>
+                <?php   foreach ($gallery as $item) { ?>
                 <div class="col-md-6 gallery-item c_col">
                     <a href="<?=base_url("uploads/news_gallery/").$item["file"]?>" title="Architecture" class="img-zoom" style="height: 100%">
                         <div class="gallery-box" style="height: 100%">
@@ -47,7 +47,7 @@
                         </div>
                     </a>
                 </div>
-                 <?php $i++; if ($i==5){break;} }?>
+                 <?php $i++;  }?>
             </div>
         </div>
     </section>
@@ -59,7 +59,7 @@
                     <div class="d-sm-flex align-items-center justify-content-between">
                         <div class="projects-prev-next-left">
 
-                        </div> <a href="<?=base_url("/".$lang)?>/news">All News</a>
+                        </div> <a href="<?=base_url("/".$lang)?>/news"><?=$this->lang->line("all_news")?></a>
                         <div class="projects-prev-next-right"> </div>
                     </div>
                 </div>

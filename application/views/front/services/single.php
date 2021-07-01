@@ -35,7 +35,7 @@
                         <div class="sidebar-widget services">
                             <div class="widget-inner">
                                 <div class="sidebar-title">
-                                    <h4>All Services</h4> </div>
+                                    <h4><?=$this->lang->line("all_services")?></h4> </div>
                                 <ul>
                                     <?php  foreach ($services as $item) { ?>
                                     <li <?php if ($service["id"]==$item["id"]) { ?>class="active" <?php  }?>><a href="<?=base_url("$lang/service/").$item["id"]?>"><?=$item["title_$lang"] ?></a></li>

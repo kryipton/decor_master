@@ -14,21 +14,21 @@
 
             <?php if ($this->uri->segment(2) == "home" || $this->uri->segment(2) == "") {?>
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a class="nav-link active" href="<?=base_url("/".$lang)?>/home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="<?=base_url("/".$lang)?>/about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="<?=base_url("/".$lang)?>/services">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="<?=base_url("/".$lang)?>/projects">Projects</a></li>
-                    <li class="nav-item dropdown"> <span class="nav-link nav-color"> Media <i class="ti-angle-down"></i></span>
+                    <li class="nav-item"><a class="nav-link active" href="<?=base_url("/".$lang)?>/home"><?=$this->lang->line("home")?></a></li>
+                    <li class="nav-item"><a class="nav-link" href="<?=base_url("/".$lang)?>/about"><?=$this->lang->line("about")?></a></li>
+                    <li class="nav-item"><a class="nav-link" href="<?=base_url("/".$lang)?>/services"><?=$this->lang->line("services")?></a></li>
+                    <li class="nav-item"><a class="nav-link" href="<?=base_url("/".$lang)?>/projects"><?=$this->lang->line("projects")?></a></li>
+                    <li class="nav-item dropdown"> <span class="nav-link nav-color"> <?=$this->lang->line("media")?> <i class="ti-angle-down"></i></span>
                         <ul class="dropdown-menu last">
-                            <li class="dropdown-item"><a href="<?=base_url("/".$lang)?>/gallery">Gallery</a></li>
-                            <li class="dropdown-item"><a href="<?=base_url("/".$lang)?>/documents">Documents</a></li>
-                            <li class="dropdown-item"><a href="<?=base_url("/".$lang)?>/videos">Videos</a></li>
-                            <li class="dropdown-item"><a href="<?=base_url("/".$lang)?>/news">News</a></li>
+                            <li class="dropdown-item"><a href="<?=base_url("/".$lang)?>/gallery"><?=$this->lang->line("gallery")?></a></li>
+                            <li class="dropdown-item"><a href="<?=base_url("/".$lang)?>/documents"><?=$this->lang->line("documents")?></a></li>
+                            <li class="dropdown-item"><a href="<?=base_url("/".$lang)?>/videos"><?=$this->lang->line("videos")?></a></li>
+                            <li class="dropdown-item"><a href="<?=base_url("/".$lang)?>/news"><?=$this->lang->line("news")?></a></li>
                         </ul>
                     </li>
 
 
-                    <li class="nav-item"><a class="nav-link" href="<?=base_url("/".$lang)?>/contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="<?=base_url("/".$lang)?>/contact"><?=$this->lang->line("contact")?></a></li>
 
                     <li class="nav-item dropdown"> <span class="nav-link"> <?=$lang?> <i class="ti-angle-down"></i></span>
                         <ul class="dropdown-menu last">
@@ -80,19 +80,19 @@
                 </ul>
             <?php }else{ ?>
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a class="nav-link active" href="<?=base_url("/".$lang)?>/home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link nav-color" href="<?=base_url("/".$lang)?>/about">About</a></li>
-                    <li class="nav-item"><a class="nav-link nav-color" href="<?=base_url("/".$lang)?>/services">Services</a></li>
-                    <li class="nav-item"><a class="nav-link nav-color" href="<?=base_url("/".$lang)?>/projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="<?=base_url("/".$lang)?>/home"><?=$this->lang->line("home")?></a></li>
+                    <li class="nav-item"><a class="nav-link nav-color" href="<?=base_url("/".$lang)?>/about"><?=$this->lang->line("about")?></a></li>
+                    <li class="nav-item"><a class="nav-link nav-color" href="<?=base_url("/".$lang)?>/services"><?=$this->lang->line("services")?></a></li>
+                    <li class="nav-item"><a class="nav-link nav-color" href="<?=base_url("/".$lang)?>/projects"><?=$this->lang->line("projects")?></a></li>
                     <li class="nav-item dropdown"> <span class="nav-link nav-color"> Media <i class="ti-angle-down"></i></span>
                         <ul class="dropdown-menu last">
-                            <li class="dropdown-item"><a href="<?=base_url("/".$lang)?>/gallery">Gallery</a></li>
-                            <li class="dropdown-item"><a href="<?=base_url("/".$lang)?>/documents">Documents</a></li>
-                            <li class="dropdown-item"><a href="<?=base_url("/".$lang)?>/videos">Videos</a></li>
-                            <li class="dropdown-item"><a href="<?=base_url("/".$lang)?>/news">News</a></li>
+                            <li class="dropdown-item"><a href="<?=base_url("/".$lang)?>/gallery"><?=$this->lang->line("gallery")?></a></li>
+                            <li class="dropdown-item"><a href="<?=base_url("/".$lang)?>/documents"><?=$this->lang->line("documents")?></a></li>
+                            <li class="dropdown-item"><a href="<?=base_url("/".$lang)?>/videos"><?=$this->lang->line("videos")?></a></li>
+                            <li class="dropdown-item"><a href="<?=base_url("/".$lang)?>/news"><?=$this->lang->line("news")?></a></li>
                         </ul>
                     </li>
-                    <li class="nav-item"><a class="nav-link nav-color" href="<?=base_url("/".$lang)?>/contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link nav-color" href="<?=base_url("/".$lang)?>/contact"><?=$this->lang->line("contact")?></a></li>
 
                     <li class="nav-item dropdown"> <span class="nav-link nav-color"> <?=$lang?> <i class="ti-angle-down"></i></span>
                         <ul class="dropdown-menu last">
