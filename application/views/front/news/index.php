@@ -15,7 +15,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 animate-box" data-animate-effect="fadeInUp">
-                    <h2 class="section-title">Our <span>News</span></h2> </div>
+                    <h2 class="section-title"><?=$this->lang->line("news")?></span></h2> </div>
             </div>
             <div class="row c_row">
 

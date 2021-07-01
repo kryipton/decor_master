@@ -22,10 +22,10 @@
                    <?=$project["desc_$lang"]?>
                 </div>
                 <div class="col-md-4">
-                    <p><b>Year : </b> <?=$project["year"]?></p>
-                    <p><b>Company : </b> <?=$project["company"]?></p>
-                    <p><b>Project Name : </b> <?=$project["project_name"]?></p>
-                    <p><b>Location : </b> <?=$project["location"]?></p>
+                    <p><b><?=$this->lang->line("year")?> : </b> <?=$project["year"]?></p>
+                    <p><b><?=$this->lang->line("company")?> : </b> <?=$project["company"]?></p>
+                    <p><b><?=$this->lang->line("project_name")?> : </b> <?=$project["project_name"]?></p>
+                    <p><b><?=$this->lang->line("location")?> : </b> <?=$project["location"]?></p>
                 </div>
             </div>
             <div class="row mt-30 c_row">
@@ -49,7 +49,7 @@
                     <div class="d-sm-flex align-items-center justify-content-between">
                         <div class="projects-prev-next-left">
 
-                        </div> <a href="<?=base_url("/".$lang)?>/projects">All Projects</a>
+                        </div> <a href="<?=base_url("/".$lang)?>/projects"><?=$this->lang->line("all_projects")?></a>
                         <div class="projects-prev-next-right"> </div>
                     </div>
                 </div>

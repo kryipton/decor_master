@@ -68,12 +68,8 @@ $route['(:any)/documents'] = 'HomeController/documents';
 $route['(:any)/news'] = 'HomeController/news';
 $route['(:any)/news/(.*)'] = 'HomeController/newsSingle/$2/$1';
 
-$route['(:any)/kamin'] = 'HomeController/camins';
-$route['(:any)/manqal'] = 'HomeController/mangals';
-$route['(:any)/kataloq'] = 'HomeController/photo_catalog';
-$route['(:any)/butun_kataloq'] = 'HomeController/all_photo_catalog';
-$route['(:any)/video-kataloq'] = 'HomeController/video_catalog';
+
 $route['(:any)/contact'] = 'HomeController/contact';
+$route['(:any)/sendmail'] = 'HomeController/sendmail';
 
 
-$route['(:any)/get_catalog'] = 'HomeController/get_catalog';

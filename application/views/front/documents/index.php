@@ -29,7 +29,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h2 class="section-title"><span>Documents</span></h2> </div>
+                    <h2 class="section-title"><span><?=$this->lang->line("documents")?></span></h2> </div>
             </div>
             <div class="row">
 

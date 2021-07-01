@@ -21,7 +21,7 @@
 										</span> </a>
                         </div>
                         <div class="cont mt-15 mb-30">
-                            <h5>View promo video</h5> </div>
+                            <h5><?=$this->lang->line("promo_video")?></h5> </div>
                     </div>
                 </div>
                 <!-- Testiominals -->
@@ -67,21 +67,21 @@
             <div class="col-md-4 mb-30">
                 <div class="item fotcont">
                     <div class="fothead">
-                        <h6>Phone</h6> </div>
+                        <h6><?=$this->lang->line("phone")?></h6> </div>
                     <p><?=$contact["phone"]?></p>
                 </div>
             </div>
             <div class="col-md-4 mb-30">
                 <div class="item fotcont">
                     <div class="fothead">
-                        <h6>Email</h6> </div>
+                        <h6><?=$this->lang->line("email")?></h6> </div>
                     <p><?=$contact["email"]?></p>
                 </div>
             </div>
             <div class="col-md-4 mb-30">
                 <div class="item fotcont">
                     <div class="fothead">
-                        <h6>Our Address</h6> </div>
+                        <h6><?=$this->lang->line("address")?></h6> </div>
                     <p><?=$contact["address_$lang"]?></p>
                 </div>
             </div>

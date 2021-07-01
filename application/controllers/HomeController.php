@@ -136,6 +136,43 @@ class HomeController extends CI_Controller {
         $this->load->view('front/includes/index', $data);
     }
 
+    public function sendmail()
+    {
+        $name = strip_tags($this->input->post("name"));
+        $mail = strip_tags($this->input->post("email"));
+        $msg = strip_tags($this->input->post("message"));
+
+        if (!empty($name) && !empty($mail)  && !empty($msg)) {
+            $contact= $this->db->get("contact")->row_array();;
+            $mail="mutalib0101@gmail.com";
+
+            $config = Array(
+                'protocol' => 'smtp',
+                'smtp_host' => 'ssl://smtp.googlemail.com',
+                'smtp_port' => 465,
+                'smtp_user' => 'decormasterbaku@gmail.com',
+                'smtp_pass' => 'DecorMasterBaku',
+                'mailtype'  => 'html',
+                'charset'  => 'html',
+                'wordwrap'  => TRUE, );
+            $this->email->set_newline(" \ r \ n ");
+            $this->load->library("email");
+            $this->email->initialize($config);
+            $this->email->set_newline("\r\n");
+            $this->email->from('decormasterbaku@gmail.com', $name);
+            $this->email->to("$mail");
+            $this->email->subject('Decor Master');
+            $this->email->message("$name adlı şəxsdən mesaj:<br> $msg <br> <br> <strong>Şəxslə əlaqə:</strong> <br> $mail <br>") ;
+            $this->email->send();
+            echo $this->email->print_debugger();
+
+        } else {
+            echo "oops!";
+        }
+
+    }
+
+
     public function gallery()
     {
         //hamisinda cagirilacaqlar
