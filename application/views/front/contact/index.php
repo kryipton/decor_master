@@ -21,7 +21,7 @@
                 <div class="col-md-4 mb-30 animate-box" data-animate-effect="fadeInUp">
 
                     <p><?=$contact["desc_$lang"]?></p>
-                    <p><b>VAT :</b> USA002323065B06</p>
+
                 </div>
                 <div class="col-md-4 mb-30 animate-box" data-animate-effect="fadeInUp">
                     <p><b><?=$this->lang->line("contact_details")?></b></p>
