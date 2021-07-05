@@ -60,6 +60,7 @@ $route['(:any)/about'] = 'HomeController/about';
 
 $route['(:any)/services'] = 'HomeController/services';
 $route['(:any)/service/(.*)'] = 'HomeController/serviceSingle/$2/$1';
+$route['(:any)/sub_service/(.*)/(.*)'] = 'HomeController/subServiceSingle/$3/$2/$1';
 $route['(:any)/projects'] = 'HomeController/projects';
 $route['(:any)/project/(.*)'] = 'HomeController/projectSingle/$2/$1';
 $route['(:any)/gallery'] = 'HomeController/gallery';

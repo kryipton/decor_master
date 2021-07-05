@@ -1,33 +1,58 @@
 <?php $lang = $this->session->userdata("lang")?>
 
+<style>
+
+    .c_col * {
+        height: 100%;
+    }
+
+</style>
+
 
 <!-- Slider -->
 <header class="header slider-fade">
     <div class="owl-carousel owl-theme">
-        <!-- The opacity on the image is made with "data-overlay-dark="number". You can change it using the numbers 0-9. -->
-
         <?php foreach ($slides as $item) { ?>
-            <div class="text-left item bg-img" data-overlay-dark="3" data-background="<?=base_url("uploads/slider/$item[img]")?>">
+
+            <div class="text-right item bg-img" data-overlay-dark="3" data-background="<?=base_url("uploads/slider/$item[img]")?>">
                 <div class="v-middle caption mt-30">
                     <div class="container">
                         <div class="row">
-                            <div class="col-md-7">
+                            <div class="col-md-7 offset-md-5">
                                 <div class="o-hidden">
-                                    <h1><?=$item["title_$lang"]?></h1>
+                                    <h1>
+                                        <?=$item["title_$lang"]?>
+                                    </h1>
                                     <p>
                                         <?=$item["title2_$lang"]?>
                                     </p>
-                                    <div class="butn-light mt-30 mb-30"> <a href="<?=$item["button_link"]?>" target="_blank"><span>
-                                                <?=$item["button_text_$lang"]?>
-                                    </span></a> </div>
+
+                                    <?php if (!empty($item["button_text_$lang"])){ ?>
+                                        <div class="butn-light mt-30 mb-30"><a href="<?=$item["button_link"]?>" target="_blank"><span>
+                                                    <?=$item["button_text_$lang"]?>
+                                                </span></a></div>
+                                    <?php }?>
+
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
         <?php }?>
 
+    </div>
+    <!-- Corner -->
+    <div class="hero-corner"></div>
+    <div class="hero-corner3"></div>
+    <!-- Left Panel -->
+    <div class="left-panel">
+        <ul class="social-left clearfix">
+            <li><a href="<?=$social["instagram"]?>"><i class="ti-instagram"></i></a></li>
+            <li><a href="<?=$social["you_tube"]?>"><i class="ti-youtube"></i></a></li>
+            <li><a href="<?=$social["facebook"]?>"><i class="ti-facebook"></i></a></li>
+        </ul>
     </div>
 </header>
 
@@ -72,13 +97,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h2 class="section-title">Our <span>Projects</span></h2> </div>
+                    <h2 class="section-title"><?=$this->lang->line("projects")?></h2> </div>
             </div>
             <div class="row">
                 <div class="col-md-12">
                     <div class="owl-carousel owl-theme">
                         <?php  foreach ($projects as $item) { ?>
-                        <div class="item">
+                        <div class="item c_col" style="max-height: 300px">
                             <div class="position-re o-hidden"> <img src="<?=base_url("uploads/projects/").$item['img']?>" alt=""> </div>
                             <div class="con">
                                 <h6><a href="<?=base_url("$lang/project/").$item["id"]?>"><?=$item["company"]?></a></h6>
@@ -98,7 +123,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h2 class="section-title">Our <span>Services</span></h2> </div>
+                    <h2 class="section-title"><?=$this->lang->line("our_services")?></h2> </div>
             </div>
             <div class="row">
                 <?php $i=1; foreach ($services as $item) { ?>
@@ -107,7 +132,6 @@
                         <a href="<?=base_url("$lang/service/").$item["id"]?>"> <img src="<?=base_url("uploads/services/").$item['img']?>" alt="">
                             <h5><?=$item["title_$lang"]?></h5>
                             <div class="line"></div>
-                            <p><?=$item["desc_$lang"]?></p>
                             <div class="numb">0<?=$i?></div>
                         </a>
                     </div>
@@ -123,13 +147,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h2 class="section-title">Current <span>News</span></h2> </div>
+                    <h2 class="section-title"><?=$this->lang->line("current_news")?></h2> </div>
             </div>
             <div class="row">
                 <div class="col-md-12">
                     <div class="owl-carousel owl-theme">
                         <?php  foreach ($news as $item) { ?>
-                        <div class="item">
+                        <div class="item c_col">
                             <div class="position-re o-hidden"> <img src="<?=base_url("uploads/news/").$item['img']?>" alt=""> </div>
                             <div class="con"> <span class="category">
                                         <a href="<?=base_url("$lang/news/").$item["id"]?>"><?=$item["title_$lang"]?> </a> -  <?=$item["date"]?>

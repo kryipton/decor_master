@@ -2,7 +2,7 @@
 
 
   "home": "Əsas Səhifə",
-  "about": "Haqqında",
+  "about": "Haqqımızda",
   "services": "Servislər",
   "media": "Media",
   "gallery": "Qalareya",
@@ -11,7 +11,7 @@
   "news": "Xəbərlər",
   "all_news": "Bütün Xəbərlər",
   "contact": "Əlaqə",
-  "projects": "Layihələr",
+  "projects": "Layihələrimiz",
   "phone": "Telefon",
   "email": "E-poçt",
   "address": "Ünvanımız",
@@ -29,6 +29,8 @@
   "full_name": "Ad Soyadınız",
   "your_email": "E-poçtunuz",
   "your_message": "Mesajınız",
-  "send": "Göndər"
+  "send": "Göndər",
+
+  "sub_services" : "Alt Xidmətlər"
 
 }

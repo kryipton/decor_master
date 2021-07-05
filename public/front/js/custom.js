@@ -277,6 +277,7 @@ $(function() {
     
 });
 
+
 // Slider 
 $(document).ready(function() {
     var owl = $('.header .owl-carousel');
@@ -322,6 +323,10 @@ paceOptions = {
     document: true,
     eventLag: false
 };
+//Pace.on('done', function () {
+//    $('#preloader').addClass("isdone");
+//    $('.loading-text').addClass("isdone");
+//});
 Pace.on('done', function() {
   $('#preloader').delay(500).fadeOut(800);
 });

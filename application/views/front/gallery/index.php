@@ -2,16 +2,13 @@
 
 <style>
 
-    .row{
-        overflow: hidden;
+    .c_col *{
+        height: 100%;
     }
 
-    [class*="col-"]{
-        margin-bottom: -99999px;
-        padding-bottom: 99999px;
-    }
 
 </style>
+
 
 
 <div class="content-wrapper">
@@ -35,7 +32,7 @@
                 <!-- 3 columns -->
                 <?php  foreach ($gallery as $item) { ?>
 
-                <div class="col-md-4 gallery-item">
+                <div class="col-md-4 gallery-item c_col" style="max-height: 300px;">
                     <a href="<?=base_url("uploads/gallery/").$item["file"]?>" title="" class="img-zoom" style="height: 100%;">
                         <div class="gallery-box" style="height: 100%;">
                             <div class="gallery-img" style="height: 100%;"> <img style="height: 100%;" src="<?=base_url("uploads/gallery/").$item["file"]?>" class="" alt="work-img"> </div>

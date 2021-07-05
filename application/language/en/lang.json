@@ -29,6 +29,9 @@
   "full_name": "Full Name",
   "your_email": "Your Email",
   "your_message": "Your Message",
-  "send": "Send"
+  "send": "Send",
+
+  "sub_services" : "Sub Services"
+
 
 }

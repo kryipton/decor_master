@@ -96,7 +96,7 @@
                     </div>
                 </div>
                 <div class="col-md-4 abot">
-                    <div class="social-icon"> <a href="<?=$social["facebook"]?>"><i class="ti-facebook"></i></a> <a href="<?=$social["youtube"]?>"><i class="ti-youtube"></i></a> <a href="<?=$social["instagram"]?>"><i class="ti-instagram"></i></a>  </div>
+                    <div class="social-icon"> <a href="<?=$social["facebook"]?>"><i class="ti-facebook"></i></a> <a href="<?=$social["you_tube"]?>"><i class="ti-youtube"></i></a> <a href="<?=$social["instagram"]?>"><i class="ti-instagram"></i></a>  </div>
                 </div>
             </div>
         </div>

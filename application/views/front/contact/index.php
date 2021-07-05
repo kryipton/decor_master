@@ -27,7 +27,7 @@
                     <p><b><?=$this->lang->line("contact_details")?></b></p>
                     <p><b><?=$this->lang->line("phone")?> :</b> <?=$contact["phone"]?></p>
                     <p><b><?=$this->lang->line("email")?> :</b> <?=$contact["email"]?></p>
-                    <p><b><?=$this->lang->line("address")?> :</b> <?=$contact["adress_$lang"]?></p>
+                    <p><b><?=$this->lang->line("address")?> :</b> <?=$contact["address_$lang"]?></p>
                 </div>
                 <div class="col-md-4 animate-box" data-animate-effect="fadeInUp">
                     <p><b><?=$this->lang->line("contact_form")?></b></p>
@@ -49,7 +49,9 @@
             <!-- Map Section-->
             <div class="row">
                 <div class="col-md-12 mb-30 animate-box" data-animate-effect="fadeInUp">
-                    <div id="bauen-contactMap"></div>
+                    <div id="bauen-contactMap">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3038.88907600683!2d49.837403315170164!3d40.38915097936836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDIzJzIwLjkiTiA0OcKwNTAnMjIuNSJF!5e0!3m2!1str!2s!4v1625227373962!5m2!1str!2s" style="border:0; width: 100%; min-height: 400px" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
                 </div>
             </div>
         </div>

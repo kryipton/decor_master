@@ -21,13 +21,17 @@
                 <div class="col-md-8">
                      <?=$service["desc_$lang"] ?>
                     <div class="row mb-30">
-                        <div class="col-md-12 gallery-item">
-                            <a href="<?=base_url("uploads/services/").$service["img"]?>" title="Architecture" class="img-zoom">
-                                <div class="gallery-box">
-                                    <div class="gallery-img"> <img src="<?=base_url("uploads/services/").$service["img"]?>" class="img-fluid mx-auto d-block" alt="Architecture"> </div>
-                                </div>
-                            </a>
-                        </div>
+
+                        <?php foreach ($gallery as $item) { ?>
+                            <div class="col-md-6 gallery-item">
+                                <a href="<?=base_url("uploads/services_gallery/").$item["file"]?>" title="Architecture" class="img-zoom">
+                                    <div class="gallery-box">
+                                        <div class="gallery-img"> <img src="<?=base_url("uploads/services_gallery/").$item["file"]?>" class="img-fluid mx-auto d-block" alt="Architecture"> </div>
+                                    </div>
+                                </a>
+                            </div>
+                        <?php }?>
+
                     </div>
                 </div>
                 <div class="col-md-4 sidebar-side">
@@ -35,10 +39,10 @@
                         <div class="sidebar-widget services">
                             <div class="widget-inner">
                                 <div class="sidebar-title">
-                                    <h4><?=$this->lang->line("all_services")?></h4> </div>
+                                    <h4><?=$this->lang->line("sub_services")?></h4> </div>
                                 <ul>
-                                    <?php  foreach ($services as $item) { ?>
-                                    <li <?php if ($service["id"]==$item["id"]) { ?>class="active" <?php  }?>><a href="<?=base_url("$lang/service/").$item["id"]?>"><?=$item["title_$lang"] ?></a></li>
+                                    <?php  foreach ($sub_services as $item) { ?>
+                                    <li <?php if ($service["id"]==$item["id"]) { ?>class="active" <?php  }?>><a href="<?=base_url("$lang/sub_service/$service[id]/").$item["id"]?>"><?=$item["title_$lang"] ?></a></li>
                                     <?php  }?>
                                 </ul>
                             </div>

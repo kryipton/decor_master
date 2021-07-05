@@ -1,5 +1,36 @@
 <?php $lang = $this->session->userdata("lang")?>
 
+<style>
+    .c_services .item{
+        position: relative;
+        background-color: white;
+        transition-duration: 0.3s!important;
+    }
+
+    .c_item_img{
+        object-fit: cover;
+        z-index: -1;
+        top: 0px;
+        left: 0px;
+        position: absolute;
+        width: 100% !important;
+        height: 100% !important;
+        visibility: visible;
+    }
+
+    .c_services .item:hover .c_item_img{
+        /*visibility: visible;*/
+    }
+
+    .c_item:hover{
+        background-color: rgba(255, 255, 255, 0.60);
+    }
+
+
+
+
+</style>
+
 
 <div class="content-wrapper">
     <!-- Lines -->
@@ -18,18 +49,21 @@
                     <h2 class="section-title"><?=$this->lang->line("our_services")?></span></h2> </div>
             </div>
             <div class="row">
-                <?php $i=1; foreach ($services as $item) { ?>
-                <div class="col-md-4">
-                    <div class="item">
+                <?php
+                $test = 0;
+                $i=1; foreach ($services as $item) { ?>
+                <div class="col-md-4 c_services">
+                    <div class="item c_item">
+                        <img class="c_item_img" src="<?=base_url("uploads/services/").$item['overlay_img']?>" alt="">
                         <a href="<?=base_url("$lang/service/").$item["id"]?>"> <img src="<?=base_url("uploads/services/").$item['img']?>" alt="">
                             <h5><?=$item["title_$lang"]?></h5>
                             <div class="line"></div>
-                            <p><?=$item["desc_$lang"]?></p>
+<!--                            <p>--><?//=$item["desc_$lang"]?><!--</p>-->
                             <div class="numb">0<?=$i?></div>
                         </a>
                     </div>
                 </div>
-                <?php $i++; }?>
+                <?php $test++; $i++; }?>
 
             </div>
         </div>

@@ -41,10 +41,15 @@ class ServicesController extends MY_Controller{
             "Başlıq (Az) (visible)",
             "Adı (EN)",
             "Adı (Ru)",
-            "Ətraflı Az (visible)",
+            "Ətraflı Az",
             "Desc En",
             "Desc Ru",
             "Şəkil (visible)",
+            "Arxa Fon Şəkli (visible)",
+
+            "Qalereya (visible)",
+            "Alt xidmətlər (visible)",
+
         );
 
         //      inputlarin adlari ve labelleri
@@ -58,6 +63,8 @@ class ServicesController extends MY_Controller{
             "Ətraflı (Ru)" => "(group2)desc_ru",
 
             "Şəkil" => "img",
+
+            "Arxa Fon Şəkli" => "overlay_img",
         );
 
 
@@ -147,6 +154,8 @@ class ServicesController extends MY_Controller{
 
         $config["where"] = array();
         $config["additional_links"] = array(
+            "Galereya" => "ServicesGalleryController/index/",
+            "Alt Xidmətlər" => "SubServicesController/index/"
         );
         $config["table_name"] = $this->table_name;
         $config["upload_path"] = $this->upload_path;

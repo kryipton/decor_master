@@ -28,7 +28,7 @@
             <div class="row">
 
                 <?php  foreach ($projects as $item) { ?>
-                <div class="col-md-6 animate-box c_col" data-animate-effect="fadeInUp" style="max-height: 300px!important;">
+                <div class="col-md-6 animate-box c_col" data-animate-effect="fadeInUp" style="margin-top: 15px;max-height: 300px!important;">
                     <div class="item" >
                         <div class="position-re o-hidden"> <img src="<?=base_url("uploads/projects/").$item['img']?>" alt=""> </div>
                         <div class="con">

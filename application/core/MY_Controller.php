@@ -92,7 +92,7 @@ class MY_Controller extends CI_Controller{
                 if ($is_upload){
                     $post_data = $this->upload->data('file_name');
 
-                    if (substr($post_data, -3) == "jpg" || substr($post_data, -3) == "png" || substr($post_data, -4) == "jpeg" || substr($post_data, -3) == "gif"){
+                    if (substr($post_data, -3) == "jpg" || substr($post_data, -3) == "png" || substr($post_data, -4) == "jpeg" || substr($post_data, -3) == "gif" || substr($post_data, -4) == "webp"){
                         $config_img['image_library'] = 'gd2';
                         $config_img['source_image'] = $config["upload_path"] . $post_data;
                         $config_img['create_thumb'] = false;
@@ -225,7 +225,7 @@ class MY_Controller extends CI_Controller{
                 if ($is_upload){
                     $post_data = $this->upload->data('file_name');
 
-                    if (substr($post_data, -3) == "jpg" || substr($post_data, -3) == "png" || substr($post_data, -4) == "jpeg" || substr($post_data, -3) == "gif"){
+                    if (substr($post_data, -3) == "jpg" || substr($post_data, -3) == "png" || substr($post_data, -4) == "jpeg" || substr($post_data, -3) == "gif" || substr($post_data, -4) == "webp"){
                         $config_img['image_library'] = 'gd2';
                         $config_img['source_image'] = $config["upload_path"] . $post_data;
                         $config_img['create_thumb'] = false;
@@ -375,7 +375,7 @@ class MY_Controller extends CI_Controller{
                 if ($is_upload){
                     $post_data = $this->upload->data('file_name');
 
-                    if (substr($post_data, -3) == "jpg" || substr($post_data, -3) == "png" || substr($post_data, -4) == "jpeg" || substr($post_data, -3) == "gif"){
+                    if (substr($post_data, -3) == "jpg" || substr($post_data, -3) == "png" || substr($post_data, -4) == "jpeg" || substr($post_data, -3) == "gif" || substr($post_data, -4) == "webp"){
                         $config_img['image_library'] = 'gd2';
                         $config_img['source_image'] = $config["upload_path"] . $post_data;
                         $config_img['create_thumb'] = false;
@@ -611,7 +611,7 @@ class MY_Controller extends CI_Controller{
 
         //      sekiller upload edilir
         $config['upload_path'] = $upload_path;
-        $config['allowed_types'] = 'jpg|jpeg|png|gif';
+        $config['allowed_types'] = 'jpg|jpeg|png|gif|webp';
         $config['file_name'] = $_FILES[$input_name]['name'];
 
         $this->load->library('upload',$config);
@@ -665,7 +665,7 @@ class MY_Controller extends CI_Controller{
 
         //      sekiller dropzonedan upload edilir
         $config['upload_path'] = $config2["upload_path"];
-        $config['allowed_types'] = 'jpg|jpeg|png|gif';
+        $config['allowed_types'] = 'jpg|jpeg|png|gif|webp';
         $config['file_name'] = $_FILES[$config2["file"]]['name'];
 
         $this->load->library('upload',$config);
@@ -781,7 +781,7 @@ class MY_Controller extends CI_Controller{
 
             $count = 0;
             foreach ($item as $k=>$v){
-                if (substr($v, -4) == ".jpg" || substr($v, -4) == ".png" || substr($v, -5) == ".jpeg"){
+                if (substr($v, -4) == ".jpg" || substr($v, -4) == ".png" || substr($v, -5) == ".jpeg" || substr($v, -5) == ".webp"){
                     $item[$k] = '<a href="' . base_url($config["upload_path"]) . $v .'" data-size="1600x1067">
                                   <img class="img-fluid" width="100px" height ="100px" style="display: initial; object-fit:contain; height:100px!important; width:100px!important" src="' . base_url($config["upload_path"]) . $v .'" alt="Sekil" >
                                 </a>';
@@ -937,7 +937,7 @@ class MY_Controller extends CI_Controller{
 
             $count = 0;
             foreach ($item as $k=>$v){
-                if (substr($v, -4) == ".jpg" || substr($v, -4) == ".png" || substr($v, -5) == ".jpeg"){
+                if (substr($v, -4) == ".jpg" || substr($v, -4) == ".png" || substr($v, -5) == ".jpeg" || substr($v, -5) == ".webp"){
                     $item[$k] = '<a href="' . base_url($config["upload_path"]) . $v .'" data-size="1600x1067">
                                   <img class="img-fluid" width="200px" height ="200px" style="display: initial; object-fit:contain; height:150px!important; width:150px!important" src="' . base_url($config["upload_path"]) . $v .'" alt="Sekil" >
                                 </a>';
@@ -1091,7 +1091,7 @@ class MY_Controller extends CI_Controller{
 
             $count = 0;
             foreach ($item as $k=>$v){
-                if (substr($v, -4) == ".jpg" || substr($v, -4) == ".png" || substr($v, -5) == ".jpeg"){
+                if (substr($v, -4) == ".jpg" || substr($v, -4) == ".png" || substr($v, -5) == ".jpeg" || substr($v, -5) == ".webp"){
                     $item[$k] = '<a href="' . base_url($config["upload_path"]) . $v .'" data-size="1600x1067">
                                   <img class="img-fluid" width="200px" height ="200px" style="display: initial; object-fit:contain; height:150px!important; width:150px!important" src="' . base_url($config["upload_path"]) . $v .'" alt="Sekil" >
                                 </a>';

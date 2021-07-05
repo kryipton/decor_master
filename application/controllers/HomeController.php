@@ -18,10 +18,7 @@ class HomeController extends CI_Controller {
     public function index()
     {
         //hamisinda cagirilacaqlar
-//        $data["menus"] = $this->db->order_by("id", "asc")->get("menus")->result_array();
-//        $data["contact"] = $this->db->get("contact")->row_array();
-//        $data["logo"] = $this->db->get("logo")->row_array();
-//        $data["social"] = $this->db->get("social")->row_array();
+        $data["logo"] = $this->db->get("logo")->row_array();
         //hamisinda cagirilacaqlar
 
 
@@ -44,6 +41,7 @@ class HomeController extends CI_Controller {
     public function about()
     {
         //hamisinda cagirilacaqlar
+        $data["logo"] = $this->db->get("logo")->row_array();
         $data["slides"] = $this->db->order_by("id", "desc")->get("slider")->result_array();
         $data["contact"] = $this->db->get("contact")->row_array();
         $data["social"] = $this->db->get("social")->row_array();
@@ -58,6 +56,8 @@ class HomeController extends CI_Controller {
     public function services()
     {
         //hamisinda cagirilacaqlar
+        $data["logo"] = $this->db->get("logo")->row_array();
+
         $data["slides"] = $this->db->order_by("id", "desc")->get("slider")->result_array();
         $data["contact"] = $this->db->get("contact")->row_array();
         $data["social"] = $this->db->get("social")->row_array();
@@ -69,20 +69,46 @@ class HomeController extends CI_Controller {
         $this->load->view('front/includes/index', $data);
     }
 
+    public function subServiceSingle($sub_service_id, $service_id, $lang)
+    {
+
+        //hamisinda cagirilacaqlar
+        $data["logo"] = $this->db->get("logo")->row_array();
+
+        $data["slides"] = $this->db->order_by("id", "desc")->get("slider")->result_array();
+        $data["contact"] = $this->db->get("contact")->row_array();
+        $data["social"] = $this->db->get("social")->row_array();
+        //hamisinda cagirilacaqlar
+
+        $data["gallery"] = $this->db->where("sub_service_id", $sub_service_id)->order_by("id", "desc")->get("sub_service_gallery")->result_array();
+
+        $data["service"] = $this->db->where("id", $sub_service_id)->get("sub_service")->row_array();;
+
+
+        $data["sub_services"] = $this->db->where("service_id", $service_id)->get("sub_service")->result_array();
+
+
+        $data["page"] = "sub_service/single";
+        $this->load->view('front/includes/index', $data);
+    }
+
     public function serviceSingle($id)
     {
         //hamisinda cagirilacaqlar
+        $data["logo"] = $this->db->get("logo")->row_array();
+
         $data["slides"] = $this->db->order_by("id", "desc")->get("slider")->result_array();
         $data["contact"] = $this->db->get("contact")->row_array();
         $data["social"] = $this->db->get("social")->row_array();
         //hamisinda cagirilacaqlar
 
         $data["services"] = $this->db->order_by("id", "desc")->get("services")->result_array();
+        $data["gallery"] = $this->db->where("service_id", $id)->order_by("id", "desc")->get("services_gallery")->result_array();
 
         $data["service"] = $this->db->where("id", $id)->get("services")->row_array();;
 
-        if(empty($data["service"]))
-            redirect(base_url());
+        $data["sub_services"] = $this->db->where("service_id", $id)->get("sub_service")->result_array();
+
 
         $data["page"] = "services/single";
         $this->load->view('front/includes/index', $data);
@@ -91,6 +117,8 @@ class HomeController extends CI_Controller {
     public function projects()
     {
         //hamisinda cagirilacaqlar
+        $data["logo"] = $this->db->get("logo")->row_array();
+
         $data["slides"] = $this->db->order_by("id", "desc")->get("slider")->result_array();
         $data["contact"] = $this->db->get("contact")->row_array();
         $data["social"] = $this->db->get("social")->row_array();
@@ -105,6 +133,8 @@ class HomeController extends CI_Controller {
     public function projectSingle($id)
     {
         //hamisinda cagirilacaqlar
+        $data["logo"] = $this->db->get("logo")->row_array();
+
         $data["slides"] = $this->db->order_by("id", "desc")->get("slider")->result_array();
         $data["contact"] = $this->db->get("contact")->row_array();
         $data["social"] = $this->db->get("social")->row_array();
@@ -126,6 +156,8 @@ class HomeController extends CI_Controller {
     public function contact()
     {
         //hamisinda cagirilacaqlar
+        $data["logo"] = $this->db->get("logo")->row_array();
+
         $data["slides"] = $this->db->order_by("id", "desc")->get("slider")->result_array();
         $data["contact"] = $this->db->get("contact")->row_array();
         $data["social"] = $this->db->get("social")->row_array();
@@ -176,6 +208,8 @@ class HomeController extends CI_Controller {
     public function gallery()
     {
         //hamisinda cagirilacaqlar
+        $data["logo"] = $this->db->get("logo")->row_array();
+
         $data["slides"] = $this->db->order_by("id", "desc")->get("slider")->result_array();
         $data["contact"] = $this->db->get("contact")->row_array();
         $data["social"] = $this->db->get("social")->row_array();
@@ -190,6 +224,8 @@ class HomeController extends CI_Controller {
     public function videos()
     {
         //hamisinda cagirilacaqlar
+        $data["logo"] = $this->db->get("logo")->row_array();
+
         $data["slides"] = $this->db->order_by("id", "desc")->get("slider")->result_array();
         $data["contact"] = $this->db->get("contact")->row_array();
         $data["social"] = $this->db->get("social")->row_array();
@@ -204,6 +240,8 @@ class HomeController extends CI_Controller {
     public function documents()
     {
         //hamisinda cagirilacaqlar
+        $data["logo"] = $this->db->get("logo")->row_array();
+
         $data["slides"] = $this->db->order_by("id", "desc")->get("slider")->result_array();
         $data["contact"] = $this->db->get("contact")->row_array();
         $data["social"] = $this->db->get("social")->row_array();
@@ -218,6 +256,8 @@ class HomeController extends CI_Controller {
     public function news()
     {
         //hamisinda cagirilacaqlar
+        $data["logo"] = $this->db->get("logo")->row_array();
+
         $data["slides"] = $this->db->order_by("id", "desc")->get("slider")->result_array();
         $data["contact"] = $this->db->get("contact")->row_array();
         $data["social"] = $this->db->get("social")->row_array();

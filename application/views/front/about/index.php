@@ -10,13 +10,13 @@
         </div>
     </section>
     <!-- Header Banner -->
-    <section class="banner-header banner-img valign bg-img bg-fixed" data-overlay-light="3" data-background="<?=base_url("public/front/")?>img/banner.jpg"></section>
+    <section class="banner-header banner-img valign bg-img bg-fixed" data-overlay-light="0" data-background="<?=base_url("public/front/")?>img/banner.jpg"></section>
     <!-- About -->
     <section class="about section-padding2">
         <div class="container">
             <div class="row">
                 <div class="col-md-6 mb-30 animate-box" data-animate-effect="fadeInUp">
-                    <h2 class="section-title">About <span><?=$about["title_$lang"]?></span></h2>
+                    <h2 class="section-title"><span><?=$about["title_$lang"]?></span></h2>
                     <?=$about["desc_$lang"]?>
                 </div>
                 <div class="col-md-6 animate-box" data-animate-effect="fadeInUp">

@@ -24,7 +24,8 @@
                     <div class="col-md-4">
                         <div class="vid-area mb-30">
                             <div class="vid-icon"> <img src="<?=base_url("uploads/videos/").$item["img"]?>" alt="YouTube">
-                                <a class="video-gallery-button vid" href="<?=$item["link"] ?>"> <span class="video-gallery-polygon">
+                                <a class="video-gallery-button vid" href="<?=$item["link"] ?>">
+                                    <span class="video-gallery-polygon" style="background: rgba(38,26,26,0.75);">
 										<i class="ti-control-play"></i>
 									</span> </a>
                             </div>
