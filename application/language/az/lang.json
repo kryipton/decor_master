@@ -31,6 +31,7 @@
   "your_message": "Mesajınız",
   "send": "Göndər",
 
-  "sub_services" : "Alt Xidmətlər"
-
+  "sub_services" : "Alt Xidmətlər",
+  "no_data" : "Məlumat tapılmadı",
+  "search" : "Axtar..."
 }

@@ -70,6 +70,7 @@ $route['(:any)/news'] = 'HomeController/news';
 $route['(:any)/news/(.*)'] = 'HomeController/newsSingle/$2/$1';
 
 
+$route['(:any)/search'] = 'HomeController/search';
 $route['(:any)/contact'] = 'HomeController/contact';
 $route['(:any)/sendmail'] = 'HomeController/sendmail';
 

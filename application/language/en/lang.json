@@ -31,7 +31,9 @@
   "your_message": "Your Message",
   "send": "Send",
 
-  "sub_services" : "Sub Services"
+  "sub_services" : "Sub Services",
+  "no_data" : "No data",
+  "search" : "Search..."
 
 
 }

@@ -8,4 +8,5 @@
     <link rel="shortcut icon" href="<?=base_url("public/front/")?>img/favicon.png" />
     <link rel="stylesheet" href="<?=base_url("public/front/")?>css/plugins.css" />
     <link rel="stylesheet" href="<?=base_url("public/front/")?>css/style.css" />
+    <link rel="stylesheet" href="<?=base_url("public/front/")?>css/form.css" />
 </head>

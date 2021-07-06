@@ -149,6 +149,18 @@
                 </li>
             </ul>
         <?php }?>
+
+
+    </div>
+
+    <div class="search-bar-wrapper">
+        <div class="search-bar">
+            <form method='post' action="<?= base_url("$lang/search") ?>">
+            <input type="text" class="search-input" name="search" value="<?=$value?>" placeholder="<?=$this->lang->line("search")?>...">
+                <button type="submit" class="button">
+                </button>
+            </form>
+        </div>
     </div>
 
 

@@ -34,24 +34,12 @@
     <div class="container">
         <div class="row">
             <div class="col-md-7 owl-carousel owl-theme">
+                <?php foreach ($partners as $item) { ?>
                 <div class="clients-logo">
-                    <a href="#0"><img src="<?=base_url("public/front/")?>img/clients/1.png" alt=""></a>
+                    <a href="<?=base_url("$item[link]")?>"><img src="<?=base_url("uploads/partners/$item[img]")?>" alt=""></a>
                 </div>
-                <div class="clients-logo">
-                    <a href="#0"><img src="<?=base_url("public/front/")?>img/clients/2.png" alt=""></a>
-                </div>
-                <div class="clients-logo">
-                    <a href="#0"><img src="<?=base_url("public/front/")?>img/clients/3.png" alt=""></a>
-                </div>
-                <div class="clients-logo">
-                    <a href="#0"><img src="<?=base_url("public/front/")?>img/clients/4.png" alt=""></a>
-                </div>
-                <div class="clients-logo">
-                    <a href="#0"><img src="<?=base_url("public/front/")?>img/clients/5.png" alt=""></a>
-                </div>
-                <div class="clients-logo">
-                    <a href="#0"><img src="<?=base_url("public/front/")?>img/clients/6.png" alt=""></a>
-                </div>
+                <?php }?>
+
             </div>
         </div>
     </div>

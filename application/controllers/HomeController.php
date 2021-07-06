@@ -17,6 +17,8 @@ class HomeController extends CI_Controller {
 
     public function index()
     {
+
+
         //hamisinda cagirilacaqlar
         $data["logo"] = $this->db->get("logo")->row_array();
         //hamisinda cagirilacaqlar
@@ -32,6 +34,7 @@ class HomeController extends CI_Controller {
         $data["services"] = $this->db->order_by("id", "desc")->get("services")->result_array();
         $data["projects"] = $this->db->order_by("id", "desc")->get("projects")->result_array();
         $data["news"] = $this->db->order_by("id", "desc")->get("news")->result_array();
+        $data["partners"] = $this->db->order_by("id", "desc")->get("partners")->result_array();
 
 
         $data["page"] = "home/index";
@@ -45,6 +48,7 @@ class HomeController extends CI_Controller {
         $data["slides"] = $this->db->order_by("id", "desc")->get("slider")->result_array();
         $data["contact"] = $this->db->get("contact")->row_array();
         $data["social"] = $this->db->get("social")->row_array();
+        $data["partners"] = $this->db->order_by("id", "desc")->get("partners")->result_array();
         //hamisinda cagirilacaqlar
 
         $data["about"] = $this->db->get("about")->row_array();
@@ -61,6 +65,7 @@ class HomeController extends CI_Controller {
         $data["slides"] = $this->db->order_by("id", "desc")->get("slider")->result_array();
         $data["contact"] = $this->db->get("contact")->row_array();
         $data["social"] = $this->db->get("social")->row_array();
+        $data["partners"] = $this->db->order_by("id", "desc")->get("partners")->result_array();
         //hamisinda cagirilacaqlar
 
         $data["services"] = $this->db->order_by("id", "desc")->get("services")->result_array();
@@ -78,6 +83,7 @@ class HomeController extends CI_Controller {
         $data["slides"] = $this->db->order_by("id", "desc")->get("slider")->result_array();
         $data["contact"] = $this->db->get("contact")->row_array();
         $data["social"] = $this->db->get("social")->row_array();
+        $data["partners"] = $this->db->order_by("id", "desc")->get("partners")->result_array();
         //hamisinda cagirilacaqlar
 
         $data["gallery"] = $this->db->where("sub_service_id", $sub_service_id)->order_by("id", "desc")->get("sub_service_gallery")->result_array();
@@ -100,6 +106,7 @@ class HomeController extends CI_Controller {
         $data["slides"] = $this->db->order_by("id", "desc")->get("slider")->result_array();
         $data["contact"] = $this->db->get("contact")->row_array();
         $data["social"] = $this->db->get("social")->row_array();
+        $data["partners"] = $this->db->order_by("id", "desc")->get("partners")->result_array();
         //hamisinda cagirilacaqlar
 
         $data["services"] = $this->db->order_by("id", "desc")->get("services")->result_array();
@@ -122,6 +129,7 @@ class HomeController extends CI_Controller {
         $data["slides"] = $this->db->order_by("id", "desc")->get("slider")->result_array();
         $data["contact"] = $this->db->get("contact")->row_array();
         $data["social"] = $this->db->get("social")->row_array();
+        $data["partners"] = $this->db->order_by("id", "desc")->get("partners")->result_array();
         //hamisinda cagirilacaqlar
 
         $data["projects"] = $this->db->order_by("id", "desc")->get("projects")->result_array();
@@ -138,6 +146,7 @@ class HomeController extends CI_Controller {
         $data["slides"] = $this->db->order_by("id", "desc")->get("slider")->result_array();
         $data["contact"] = $this->db->get("contact")->row_array();
         $data["social"] = $this->db->get("social")->row_array();
+        $data["partners"] = $this->db->order_by("id", "desc")->get("partners")->result_array();
         //hamisinda cagirilacaqlar
 
         $data["projects"] = $this->db->order_by("id", "desc")->get("projects")->result_array();
@@ -161,6 +170,7 @@ class HomeController extends CI_Controller {
         $data["slides"] = $this->db->order_by("id", "desc")->get("slider")->result_array();
         $data["contact"] = $this->db->get("contact")->row_array();
         $data["social"] = $this->db->get("social")->row_array();
+        $data["partners"] = $this->db->order_by("id", "desc")->get("partners")->result_array();
         //hamisinda cagirilacaqlar
 
 
@@ -213,6 +223,7 @@ class HomeController extends CI_Controller {
         $data["slides"] = $this->db->order_by("id", "desc")->get("slider")->result_array();
         $data["contact"] = $this->db->get("contact")->row_array();
         $data["social"] = $this->db->get("social")->row_array();
+        $data["partners"] = $this->db->order_by("id", "desc")->get("partners")->result_array();
         //hamisinda cagirilacaqlar
 
         $data["gallery"] = $this->db->order_by("id", "desc")->get("gallery")->result_array();
@@ -229,6 +240,7 @@ class HomeController extends CI_Controller {
         $data["slides"] = $this->db->order_by("id", "desc")->get("slider")->result_array();
         $data["contact"] = $this->db->get("contact")->row_array();
         $data["social"] = $this->db->get("social")->row_array();
+        $data["partners"] = $this->db->order_by("id", "desc")->get("partners")->result_array();
         //hamisinda cagirilacaqlar
 
         $data["gallery"] = $this->db->order_by("id", "desc")->get("videos")->result_array();
@@ -245,6 +257,7 @@ class HomeController extends CI_Controller {
         $data["slides"] = $this->db->order_by("id", "desc")->get("slider")->result_array();
         $data["contact"] = $this->db->get("contact")->row_array();
         $data["social"] = $this->db->get("social")->row_array();
+        $data["partners"] = $this->db->order_by("id", "desc")->get("partners")->result_array();
         //hamisinda cagirilacaqlar
 
         $data["gallery"] = $this->db->order_by("id", "desc")->get("documents")->result_array();
@@ -261,6 +274,7 @@ class HomeController extends CI_Controller {
         $data["slides"] = $this->db->order_by("id", "desc")->get("slider")->result_array();
         $data["contact"] = $this->db->get("contact")->row_array();
         $data["social"] = $this->db->get("social")->row_array();
+        $data["partners"] = $this->db->order_by("id", "desc")->get("partners")->result_array();
         //hamisinda cagirilacaqlar
 
         $data["news"] = $this->db->order_by("id", "desc")->get("news")->result_array();
@@ -276,6 +290,7 @@ class HomeController extends CI_Controller {
         $data["slides"] = $this->db->order_by("id", "desc")->get("slider")->result_array();
         $data["contact"] = $this->db->get("contact")->row_array();
         $data["social"] = $this->db->get("social")->row_array();
+        $data["partners"] = $this->db->order_by("id", "desc")->get("partners")->result_array();
         //hamisinda cagirilacaqlar
 
         $data["news"] = $this->db->order_by("id", "desc")->get("news")->result_array();
@@ -291,4 +306,41 @@ class HomeController extends CI_Controller {
         $data["page"] = "news/single";
         $this->load->view('front/includes/index', $data);
     }
+
+
+    public function search()
+    {
+        $lang=$this->session->userdata("lang");
+        //hamisinda cagirilacaqlar
+        $data["logo"] = $this->db->get("logo")->row_array();
+        $data["slides"] = $this->db->order_by("id", "desc")->get("slider")->result_array();
+        $data["contact"] = $this->db->get("contact")->row_array();
+        $data["social"] = $this->db->get("social")->row_array();
+        $data["partners"] = $this->db->order_by("id", "desc")->get("partners")->result_array();
+        //hamisinda cagirilacaqlar
+
+        $search_text = $this->input->post('search');
+
+        if (!empty($search_text)) {
+            //search query
+            $this->db->select('*');
+            $this->db->from('news');
+            if ($search_text != '') {
+                $this->db->like("title_$lang", $search_text);
+                $this->db->or_like("desc_$lang", $search_text);
+            }
+
+            $query = $this->db->get();
+
+            $data["news"] = $query->result_array();
+            $data["value"] = $search_text;
+        }else{
+            $data["news"] = array();
+            $data["value"] = $search_text;
+        }
+
+        $data["page"] = "search/index";
+        $this->load->view('front/includes/index', $data);
+    }
+
 }
